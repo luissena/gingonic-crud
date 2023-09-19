@@ -12,6 +12,7 @@ func initializeRoutes(router *gin.Engine) {
 	v1 := router.Group(basePath)
 	{
 		v1.GET("/posts", handler.ListPosts)
+		v1.POST("/posts", handler.CreatePost)
 	}
 
 	router.GET("/hello", func(ctx *gin.Context) {

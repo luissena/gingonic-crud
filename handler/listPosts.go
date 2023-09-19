@@ -1,9 +1,18 @@
 package handler
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+	"github.com/luissena/golang-crud/schemas"
+)
 
 func ListPosts(ctx *gin.Context) {
-	ctx.JSON(200, gin.H{
-		"message": "ListPosts",
-	})
+	posts := []schemas.Post{}
+
+	if err := db.Find(&posts).Error; err != nil {
+		sendError(ctx, http.StatusInternalServerError, "Error listing posts")
+		return
+	}
+	sendSucess(ctx, "list-posts", 200, posts)
 }

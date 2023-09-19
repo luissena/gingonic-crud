@@ -1,6 +1,9 @@
 package main
 
-import "github.com/luissena/golang-crud/config"
+import (
+	"github.com/luissena/golang-crud/config"
+	"github.com/luissena/golang-crud/router"
+)
 
 var (
 	logger *config.Logger
@@ -15,5 +18,7 @@ func main() {
 		logger.Errorf("Config Initialization -> %v", err)
 		return
 	}
+
+	router.Initialize()
 
 }

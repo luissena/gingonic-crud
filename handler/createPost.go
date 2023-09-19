@@ -7,7 +7,7 @@ import (
 	"github.com/luissena/golang-crud/schemas"
 )
 
-func CreatePost(ctx *gin.Context) {
+func CreatePostHandler(ctx *gin.Context) {
 	request := CreatePostRequest{}
 
 	ctx.BindJSON(&request)

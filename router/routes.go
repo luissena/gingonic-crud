@@ -11,11 +11,11 @@ func initializeRoutes(router *gin.Engine) {
 
 	v1 := router.Group(basePath)
 	{
-		v1.GET("/posts", handler.ListPosts)
-		v1.GET("/posts/:id", handler.ShowPost)
-		v1.POST("/posts", handler.CreatePost)
-		v1.DELETE("/posts", handler.DeletePost)
-		v1.PUT("/posts", handler.UpdatePost)
+		v1.GET("/posts", handler.ListPostsHandler)
+		v1.GET("/posts/:id", handler.ShowPostHandler)
+		v1.POST("/posts", handler.CreatePostHandler)
+		v1.DELETE("/posts", handler.DeletePostHandler)
+		v1.PUT("/posts", handler.UpdatePostHandler)
 	}
 
 	router.GET("/hello", func(ctx *gin.Context) {

@@ -8,7 +8,7 @@ import (
 	"github.com/luissena/golang-crud/schemas"
 )
 
-func ShowPost(ctx *gin.Context) {
+func ShowPostHandler(ctx *gin.Context) {
 	id := ctx.Params.ByName("id")
 	if id == "" {
 		sendError(ctx, http.StatusBadRequest, errParamIsRequired("id", "queryParameter").Error())

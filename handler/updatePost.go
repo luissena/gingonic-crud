@@ -8,7 +8,7 @@ import (
 	"github.com/luissena/golang-crud/schemas"
 )
 
-func UpdatePost(ctx *gin.Context) {
+func UpdatePostHandler(ctx *gin.Context) {
 	request := UpdatePostRequest{}
 
 	ctx.BindJSON(&request)

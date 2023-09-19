@@ -8,7 +8,7 @@ import (
 	"github.com/luissena/golang-crud/schemas"
 )
 
-func DeletePost(ctx *gin.Context) {
+func DeletePostHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 	if id == "" {
 		sendError(ctx, http.StatusBadRequest, errParamIsRequired("id", "queryParameter").Error())

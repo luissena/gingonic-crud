@@ -7,7 +7,7 @@ import (
 	"github.com/luissena/golang-crud/schemas"
 )
 
-func ListPosts(ctx *gin.Context) {
+func ListPostsHandler(ctx *gin.Context) {
 	posts := []schemas.Post{}
 
 	if err := db.Find(&posts).Error; err != nil {

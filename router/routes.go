@@ -13,6 +13,7 @@ func initializeRoutes(router *gin.Engine) {
 	{
 		v1.GET("/posts", handler.ListPosts)
 		v1.POST("/posts", handler.CreatePost)
+		v1.DELETE("/posts", handler.DeletePost)
 	}
 
 	router.GET("/hello", func(ctx *gin.Context) {

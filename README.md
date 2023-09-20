@@ -1,5 +1,5 @@
 
-# GoLang - CRUD
+# GinGonic - CRUD
 
 A simple application that can `create`, `list`, `edit`, `delete` and `show` Posts.
 
